@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route,Routes, Link } from "react-router-dom";
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
+import Home from "./components/Home"; 
 import "./App.css"; // Import your global styles here if needed
 
 const App = () => {
@@ -31,13 +32,13 @@ const App = () => {
             </Link>
           </div>
         </nav>
-        <Switch>
+        <Routes>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={AboutMe} />
           <Route path="/tech-stack" component={TechStack} />
           <Route path="/projects" component={Projects} />
           <Route path="/contact" component={ContactMe} />
-        </Switch>
+        </Routes>
       </div>
     </Router>
   );
